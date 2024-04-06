@@ -4,7 +4,11 @@ version = "0.1.0"
 edition = "2021"
 
 [lib]
+name = "wkVersionCheck"
 crate-type = ["cdylib"]
+
+[build]
+target = ["x86_64-pc-windows-gnu"]
 
 [dependencies.windows]
 version = "0.*"
@@ -14,4 +18,5 @@ features = [
   "Win32_System_LibraryLoader",
   "Win32_System_SystemServices",
   "Win32_UI_WindowsAndMessaging",
+  "Win32_System_Threading"
 ]
